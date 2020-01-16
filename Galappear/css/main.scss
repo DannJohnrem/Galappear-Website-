@@ -1,0 +1,60 @@
+@import './materialize.scss';
+
+//header
+$header-bg: url(../img/pattern.png);
+$header-height: 300px;
+$section: url(../img/VisionsofGrandeur.jpg);
+$footer: url(../img/CoolBlues.jpg);
+$footer-width: 100%;
+
+
+//text color function
+@function set-text-color($color) {
+    @if(lightness($color) > 50){
+        @return #000;
+    }@else{
+        @return #fff;
+    }
+}
+
+.main-header{
+    background: $header-bg;
+    color: #ffffff;
+    height: $header-height;
+    h1{
+        margin: 0;
+        padding-top: 40px;
+    }
+}
+body{
+    background-color: $primary-color;
+    color: set-text-color($primary-color);
+}
+.img-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 300px;
+}
+.card-content {
+    color: $primary-color;
+}
+.section {
+     background: #000046;  /* fallback for old browsers */
+     background: -webkit-linear-gradient(to bottom, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+     background: linear-gradient(to bottom, #000046, #1CB5E0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    //  background-image: $section;
+    //  padding-bottom: 0;
+}
+.row-1,
+.row-2,
+.row-3 {
+    opacity: 0;
+}
+footer {
+    background: #2193b0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #2193b0,#6dd5ed ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    
+}
